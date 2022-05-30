@@ -17,6 +17,7 @@ public class StudentRepositoryImpl implements StudentRepository {
 
     @Override
     public boolean delete(String id) {
+        Student student = new Student();
         String query = "";
         getConnection(query);
         return false;
