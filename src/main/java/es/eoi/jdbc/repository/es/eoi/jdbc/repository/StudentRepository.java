@@ -4,13 +4,12 @@ import java.sql.Connection;
 import java.util.List;
 
 public interface StudentRepository {
-    Connection openConnection();
 
-    public Student findById(String id);
-    public List<Student> findAll();
-    public Student create(Student student);
-    public boolean delete(String id);
-    public Student update(Student student);
+     Student findById(String id);
+     List<Student> findAll();
+     Student create(Student student);
+     boolean delete(String id);
+     Student update(Student student);
 
 
 }

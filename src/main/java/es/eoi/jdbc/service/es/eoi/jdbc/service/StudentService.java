@@ -1,21 +1,20 @@
 package es.eoi.jdbc.service.es.eoi.jdbc.service;
 
 import es.eoi.jdbc.entity.es.eoi.jdbc.entity.Student;
-import es.eoi.jdbc.repository.es.eoi.jdbc.repository.StudentRepository;
-import es.eoi.jdbc.repository.es.eoi.jdbc.repository.StudentRepositoryImpl;
 
-public class StudentService {
-    //crear atributo studentrepository
-    //la instancia en studenrepositoryimpl
-    //atributo privado student repository pero studenrepositoryimpl
-private final StudentRepository studentRepository;
+import java.util.List;
 
-public StudentService(){
-    studentRepository = new StudentRepositoryImpl();
-}
+public interface StudentService {
 
-public Student findById(String id){
-    this.studentRepository.openConnection();
-            return this.studentRepository.findById(id);
-}
+    Student findById(String id);
+
+    List<Student> findAll();
+
+    Student create(Student student);
+
+    boolean delete(String id);
+
+    Student update(Student student);
+
+
 }
